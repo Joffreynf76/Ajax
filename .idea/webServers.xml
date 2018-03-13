@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a34e1dea-eaef-4b89-b1b6-427c421b90d5" name="Ajax" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\Ajax" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

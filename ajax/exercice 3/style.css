@@ -1,0 +1,21 @@
+.main {
+   text-align: center;
+}
+
+.tab{
+    background-color:  #F5F5F5;
+    width:40%;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.tab th {
+    padding-right: 2em;
+}
+
+table {
+    text-align: center;
+}
