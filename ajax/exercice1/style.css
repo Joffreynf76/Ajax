@@ -1,0 +1,17 @@
+#view {
+  background-color:  lightgrey;
+  max-width: 960px;
+  text-align: center;
+  margin: auto;
+  padding: auto;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.main {
+  text-align: center;
+}
+
+img {
+  width: 40%;
+}
