@@ -6,14 +6,37 @@ function initMap() {
     });
 
 
-    function addMarker(target, title){
+
+    function addMarker(target, title,content){
         var marker = new google.maps.Marker({
             position: target,
             map: map,
             title: title,
-            animation: google.maps.Animation.DROP
+            animation: google.maps.Animation.BOUNCE
         });
+        var infowindow = new google.maps.InfoWindow({
+            content: '<h1>'+title+'</h1>' + content
+        });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+
+
     }
+        $.ajax({
+            type:'get',
+            url:'marker.php',
+            dataType:'json',
+            success: function (data){
+                data.markers.forEach(function(marker){
+                    addMarker({lat: parseFloat(marker.lat),lng: parseFloat(marker.lng)},marker.title,marker.content);
+
+
+                })
+            }
+        })
+
+
 
 
     map.addListener('click',function (e) {
@@ -32,7 +55,7 @@ function initMap() {
 
         $('#button').click(function(e2){
             e2.preventDefault();
-            addMarker(e.latLng, $('#nom').val());
+            addMarker(e.latLng, $('#nom').val(),$('#contenu').val());
 
             $.ajax({
                 type:'post',
@@ -44,12 +67,15 @@ function initMap() {
                         content: $('#contenu').val()
                 },
                 success: function (data){
-                    alert(data.title);
+
                 }
 
             })
             $('#overlay').remove();
+
+
         })
+
 })
 
 }
