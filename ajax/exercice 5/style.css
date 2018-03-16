@@ -1,0 +1,14 @@
+#content {
+    position:relative;
+
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0,5,4,0.5);
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+}

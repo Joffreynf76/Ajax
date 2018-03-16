@@ -12,8 +12,7 @@ $('#button').click(function(e){
     else {
         $('.error1').remove();
         $('.success1').remove();
-        $('#mail').css('border','1px solid green');
-        $('#mail1').append('<div class="success1">Email valide</div>').css('color','green').css('margin-top',0);
+
     }
     if($('#password').val().length==0){
         $('.error2').remove();
@@ -24,8 +23,7 @@ $('#button').click(function(e){
     }else {
         $('.error2').remove();
         $('.success2').remove();
-        $('#password').css('border','1px solid green');
-        $('#mdp2').append('<div class="success2">Mot de passe valide</div>').css('color','green').css('margin-top',0);
+
     }
     var email= $('#mail').val();
     var mdp = $('#password').val();
